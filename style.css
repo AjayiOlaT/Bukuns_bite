@@ -1,3 +1,4 @@
+/* === Existing Styles (Keep As Is, with spacing tweaks suggested before) === */
 body {
     font-family: sans-serif;
     line-height: 1.6;
@@ -9,7 +10,7 @@ body {
 header {
     background-color: #a47d5e; /* Kulikuli-like color */
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem 0 1.5rem 0; /* Added bottom padding */
     text-align: center;
 }
 
@@ -24,10 +25,24 @@ h1, h2 {
     border-radius: 8px;
 }
 
+#customer-details {
+    margin-top: 30px; /* More space above customer details */
+}
+
+.instructions { /* Style for the instruction text */
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 .product-item {
     border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    padding-bottom: 25px; /* More space */
+    margin-bottom: 25px; /* More space */
+    display: flex; /* Use flexbox for better layout */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    align-items: center; /* Align items vertically */
 }
 
 .product-item:last-child {
@@ -36,52 +51,81 @@ h1, h2 {
 
 .product-item h3 {
     margin-top: 0;
+    margin-bottom: 5px; /* Space below heading */
     color: #a47d5e;
+    width: 100%; /* Make heading take full width in flex */
+    order: 1; /* Order for flexbox */
+}
+.product-item p {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    order: 3; /* Order for flexbox */
 }
 
-label {
-    display: inline-block; /* Changed for better alignment with number input */
-    margin-bottom: 5px;
-    margin-right: 10px; /* Add space between label and input */
+
+/* Style for the clickable product area */
+.product-clickable {
+    cursor: pointer; /* Indicate it's clickable */
+    transition: background-color 0.2s ease-in-out;
 }
 
-input[type="number"] {
-    width: 60px; /* Adjust width as needed */
+.product-clickable:hover {
+    background-color: #f9f9f9; /* Slight highlight on hover */
+}
+
+
+.product-image-thumbnail {
+  max-width: 80px; /* Adjust size */
+  height: auto;
+  margin-right: 15px; /* Space between image and text */
+  border-radius: 5px;
+  order: 0; /* Put image first in flex */
+}
+
+/* Adjust labels and inputs within flexbox */
+.product-item label {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 10px; /* Space before label */
+    order: 4;
+}
+.product-item input[type="number"] {
+    width: 60px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    order: 5;
 }
-
 
 #customer-details div {
     margin-bottom: 15px;
 }
 
 #customer-details label {
-    display: block; /* Make labels take full width */
+    display: block;
+    margin-bottom: 8px;
 }
-
 
 input[type="text"],
 input[type="tel"],
 textarea {
-    width: 95%; /* Adjust width */
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-top: 5px; /* Add space above input */
+    margin-top: 5px;
 }
-
 
 textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
-button {
+button#order-button { /* Be specific for the order button */
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #25D366; /* WhatsApp green */
+    background-color: #25D366;
     color: white;
     border: none;
     border-radius: 5px;
@@ -91,8 +135,8 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #128C7E; /* Darker WhatsApp green */
+button#order-button:hover {
+    background-color: #128C7E;
 }
 
 footer {
@@ -101,4 +145,69 @@ footer {
     padding: 10px;
     font-size: 0.9em;
     color: #555;
+}
+
+
+/* === New Modal Styles === */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity (overlay) */
+    padding-top: 60px; /* Location of the box */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Maximum width */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.modal-close-button {
+    color: #aaa;
+    position: absolute; /* Position relative to modal-content */
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-image-large {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Center image */
+    max-height: 300px; /* Limit image height */
+    border-radius: 5px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #a47d5e;
 }
