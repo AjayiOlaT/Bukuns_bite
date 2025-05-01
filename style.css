@@ -6,6 +6,27 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+/* === Add Styles for Header Logo === */
+
+.header-logo {
+    display: block; /* Allows centering with margin */
+    margin: 0 auto 10px auto; /* Centers the logo horizontally, adds 10px space below */
+    max-height: 80px; /* Adjust the maximum height of your logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Adjust header padding if needed */
+header {
+    background-color: #a47d5e; 
+    color: #fff;
+    padding: 1.5rem 0; /* Increased padding slightly to accommodate logo */
+    text-align: center;
+}
+
+/* Optional: Adjust spacing for the text below the logo */
+header h1 {
+    margin-top: 0; /* Reduce space above H1 if logo is directly above */
+}
 
 header {
     background-color: #a47d5e; /* Kulikuli-like color */
