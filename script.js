@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- Configuration ---
-    const yourWhatsAppNumber = '2448138813159'; // IMPORTANT: Your WhatsApp number with country code (no '+' or spaces)
+    const yourWhatsAppNumber = '2348138813159'; // IMPORTANT: Your WhatsApp number with country code (no '+' or spaces)
 
     // --- Get HTML Elements ---
     const orderButton = document.getElementById('order-button');
