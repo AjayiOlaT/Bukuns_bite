@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Kulikuli!</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <header>
+        <h1>Kulikuli Corner</h1>
+        <p>Delicious Roasted Groundnut Snacks</p>
+    </header>
+
+    <section id="products">
+        <h2>Our Products</h2>
+
+        <div class="product-item" data-product-name="Kulikuli - Small Bag (Plain)">
+            <h3>Kulikuli - Small Bag (Plain)</h3>
+            <p>Classic crunchy Kulikuli. Price: $5.00</p> <label for="qty-p1">Quantity:</label>
+            <input type="number" id="qty-p1" name="qty-p1" value="0" min="0">
+        </div>
+
+        <div class="product-item" data-product-name="Kulikuli - Large Bag (Plain)">
+            <h3>Kulikuli - Large Bag (Plain)</h3>
+            <p>More of the classic crunch! Price: $9.00</p> <label for="qty-p2">Quantity:</label>
+            <input type="number" id="qty-p2" name="qty-p2" value="0" min="0">
+        </div>
+
+        <div class="product-item" data-product-name="Kulikuli - Small Bag (Spicy)">
+            <h3>Kulikuli - Small Bag (Spicy)</h3>
+            <p>Classic Kulikuli with a kick! Price: $5.50</p> <label for="qty-p3">Quantity:</label>
+            <input type="number" id="qty-p3" name="qty-p3" value="0" min="0">
+        </div>
+
+        <div class="product-item" data-product-name="Kulikuli - Large Bag (Spicy)">
+            <h3>Kulikuli - Large Bag (Spicy)</h3>
+            <p>More of the spicy goodness! Price: $9.50</p> <label for="qty-p4">Quantity:</label>
+            <input type="number" id="qty-p4" name="qty-p4" value="0" min="0">
+        </div>
+
+        </section>
+
+    <section id="customer-details">
+        <h2>Your Details</h2>
+        <form id="order-form">
+            <div>
+                <label for="customer-name">Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+            </div>
+            <div>
+                <label for="customer-phone">Phone Number:</label>
+                <input type="tel" id="customer-phone" name="customer-phone" required>
+            </div>
+            <div>
+                <label for="customer-address">Delivery Address:</label>
+                <textarea id="customer-address" name="customer-address" rows="3" required></textarea>
+            </div>
+            <button type="button" id="order-button">Order via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>We'll confirm your order and arrange payment/delivery via WhatsApp.</p>
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>
