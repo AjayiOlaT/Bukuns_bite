@@ -12,3 +12,5 @@ const useStore = create((set) => ({
     })),
   clearCart: () => set({ cart: [] }),
 }))
+
+export { useStore }
