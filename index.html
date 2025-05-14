@@ -1,105 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Your Kulikuli!</title>
-    <meta name="description" content="Order delicious homemade Kulikuli snacks online. Spicy & plain, various sizes available. Order via WhatsApp!">
-    <link rel="icon" href="favicon.png" type="image/png"> <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <img src="images/logo.png" alt="Kulikuli Corner Logo" class="header-logo"> 
-        
-        <h1>Kulikuli Corner</h1>
-        <p>Delicious Roasted Groundnut Snacks</p>
-    </header>
-
-    <section id="products">
-        <h2>Our Products</h2>
-        <p class="instructions">Click on a product for more details. Enter quantity below.</p>
-
-        <div class="product-item product-clickable"
-             data-product-name="Kulikuli - Small Bag (Plain)"
-             data-price="$5.00"
-             data-image="images/kulikuli-small-plain.jpg" data-description="Our classic crunchy Kulikuli in a convenient small bag. Perfect for a quick snack.">
-            <img src="images/kulikuli-small-plain.jpg" alt="Small Plain Kulikuli" class="product-image-thumbnail"> <h3>Kulikuli - Small Bag (Plain)</h3>
-            <p>Classic crunchy Kulikuli. Price: $5.00</p>
-            <label for="qty-p1">Quantity:</label>
-            <input type="number" id="qty-p1" name="qty-p1" value="0" min="0">
-        </div>
-
-        <div class="product-item product-clickable"
-             data-product-name="Kulikuli - Large Bag (Plain)"
-             data-price="$9.00"
-             data-image="images/kulikuli-large-plain.jpg"
-             data-description="More of the classic crunch! A larger bag perfect for sharing or satisfying a bigger craving.">
-            <img src="images/kulikuli-large-plain.jpg" alt="Large Plain Kulikuli" class="product-image-thumbnail">
-            <h3>Kulikuli - Large Bag (Plain)</h3>
-            <p>More of the classic crunch! Price: $9.00</p>
-            <label for="qty-p2">Quantity:</label>
-            <input type="number" id="qty-p2" name="qty-p2" value="0" min="0">
-        </div>
-
-        <div class="product-item product-clickable"
-             data-product-name="Kulikuli - Small Bag (Spicy)"
-             data-price="$5.50"
-             data-image="images/kulikuli-small-spicy.jpg"
-             data-description="Our classic Kulikuli with a delicious spicy kick! Small bag for a fiery snack.">
-            <img src="images/kulikuli-small-spicy.jpg" alt="Small Spicy Kulikuli" class="product-image-thumbnail">
-            <h3>Kulikuli - Small Bag (Spicy)</h3>
-            <p>Classic Kulikuli with a kick! Price: $5.50</p>
-            <label for="qty-p3">Quantity:</label>
-            <input type="number" id="qty-p3" name="qty-p3" value="0" min="0">
-        </div>
-
-        <div class="product-item product-clickable"
-             data-product-name="Kulikuli - Large Bag (Spicy)"
-             data-price="$9.50"
-             data-image="images/kulikuli-large-spicy.jpg"
-             data-description="More of the spicy goodness! Get our large bag of spicy Kulikuli.">
-            <img src="images/kulikuli-large-spicy.jpg" alt="Large Spicy Kulikuli" class="product-image-thumbnail">
-            <h3>Kulikuli - Large Bag (Spicy)</h3>
-            <p>More of the spicy goodness! Price: $9.50</p>
-            <label for="qty-p4">Quantity:</label>
-            <input type="number" id="qty-p4" name="qty-p4" value="0" min="0">
-        </div>
-        </section>
-
-    <section id="customer-details">
-        <h2>Your Details</h2>
-        <form id="order-form">
-            <div>
-                <label for="customer-name">Name:</label>
-                <input type="text" id="customer-name" name="customer-name" required placeholder="Enter your full name">
-            </div>
-            <div>
-                <label for="customer-phone">Phone Number:</label>
-                <input type="tel" id="customer-phone" name="customer-phone" required placeholder="e.g., 08012345678">
-            </div>
-            <div>
-                <label for="customer-address">Delivery Address:</label>
-                <textarea id="customer-address" name="customer-address" rows="3" required placeholder="Your street address, city, etc."></textarea>
-            </div>
-            <button type="button" id="order-button">Order via WhatsApp</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>We'll confirm your order and arrange payment/delivery via WhatsApp.</p>
-    </footer>
-
-    <div id="product-modal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close-button">&times;</span>
-            <img id="modal-image" src="" alt="Product Image" class="modal-image-large">
-            <h2 id="modal-title">Product Title</h2>
-            <p id="modal-price">Price</p>
-            <p id="modal-description">Product description goes here.</p>
-            </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kulikuli Corner - Modern African Snacks</title>
+    <meta name="description" content="Experience the future of African snacks with our artisanal Kulikuli. Order online or via WhatsApp!" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
